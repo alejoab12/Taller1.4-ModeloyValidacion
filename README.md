@@ -1,4 +1,5 @@
-<strong>Taller de modelo y validación<strong>
+<h3>Taller de modelo y validación</h3>
+<h4>Arquitectura de MicroServicios</h4>
 
 
 Se implementó una arquitectura de micro servicios, pensando en el desacoplamiento y responsabilidad única, buscando una solución acorde a la necesidad del Banco ABC. 
