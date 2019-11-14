@@ -30,3 +30,5 @@ La mediación entre el dominio de negocio y la persistencia se la delegamos a un
   <li><strong>BankABC-Agreement</strong> Servicio encargado del crud de los convenios.</li>
   <li><strong>BankABC-Transform</strong> Servicio encargado de la transformación de los mensajes.</li>
   <li><strong>Bank-Orchestration</strong> Servicio encargado de orquestar la peticiones a los otros servicios y de realizar el enrutamiento a los servicios de proveedores.</li>
+  </ul>
+  <h5><strong>API de consulta y pago:</strong>https://app.swaggerhub.com/apis-docs/MyV-javeriana/bancoabc-servicio-convenios/1.0.0</h5>
