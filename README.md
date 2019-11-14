@@ -1,9 +1,10 @@
 <h3>Taller de modelo y validación</h3>
 <h4>Arquitectura de MicroServicios</h4>
 
-
 Se implementó una arquitectura de micro servicios, pensando en el desacoplamiento y responsabilidad única, buscando una solución acorde a la necesidad del Banco ABC. 
-La arquitectura se soporte en diferentes patrones, los cuales son:
+
+La arquitectura se soporta en diferentes patrones, los cuales son:
+
 Pattern: Service registry
 Se realiza el descubrimiento de los servicios mediante API swaggers con especificación open api 3.0. Permitiendo al cliente acceder a las diferentes operaciones expuestas, contratos, y esquemas.
 Pattern: Database per service
