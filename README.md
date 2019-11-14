@@ -4,9 +4,9 @@
 Se implementó una arquitectura de micro servicios, pensando en el desacoplamiento y responsabilidad única, buscando una solución acorde a la necesidad del Banco ABC. 
 
 La arquitectura se soporta en diferentes patrones, los cuales son:
-
-Pattern: Service registry
-Se realiza el descubrimiento de los servicios mediante API swaggers con especificación open api 3.0. Permitiendo al cliente acceder a las diferentes operaciones expuestas, contratos, y esquemas.
+<ul>
+<li>Pattern: Service registry
+Se realiza el descubrimiento de los servicios mediante API swaggers con especificación open api 3.0. Permitiendo al cliente acceder a las diferentes operaciones expuestas, contratos, y esquemas.</li>
 Pattern: Database per service
 Se implementan base de datos por servicio, obligando a que cualquier necesidad de acceso a sus datos se realice por un único servicio. 
 Pattern: Service instance per container
@@ -23,3 +23,4 @@ Pattern: Dependency injection
 La creación de objetos entre capas lógicas se realiza mediante inyección de dependencias.
 Pattern: Repository
 La mediación entre el dominio de negocio y la persistencia se la delegamos a un repositorio. 
+</ul>
