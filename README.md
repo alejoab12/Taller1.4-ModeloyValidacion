@@ -34,3 +34,5 @@ La mediación entre el dominio de negocio y la persistencia se la delegamos a un
   <li><a href="https://github.com/alejoab12/Taller1.4-ModeloyValidacion/tree/master/Bank-Orchestration"><strong>Bank-Orchestration</strong></a> Servicio encargado de orquestar la peticiones a los otros servicios y de realizar el enrutamiento a los servicios de proveedores.</li>
   </ul>
   <h5><strong>API de consulta y pago:</strong>https://app.swaggerhub.com/apis-docs/MyV-javeriana/bancoabc-servicio-convenios/1.0.0</h5>
+  
+  <h6><strong>Grupo:</strong><ul><li>Farid Eliecer Ureche Lopez</li><li>Manuel Alejandro Alcala Bustos</li></ul>
