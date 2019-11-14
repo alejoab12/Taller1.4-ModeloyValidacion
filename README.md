@@ -1,3 +1,6 @@
+<strong>Taller de modelo y validación<strong>
+
+
 Se implementó una arquitectura de micro servicios, pensando en el desacoplamiento y responsabilidad única, buscando una solución acorde a la necesidad del Banco ABC. 
 La arquitectura se soporte en diferentes patrones, los cuales son:
 Pattern: Service registry
