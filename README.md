@@ -2,7 +2,7 @@
 <h4>Arquitectura de MicroServicios</h4>
 
 Se implementó una arquitectura de micro servicios, pensando en el desacoplamiento y responsabilidad única, buscando una solución acorde a la necesidad del Banco ABC. 
-
+Se realizo una composicion por orquestación de servicios.
 La arquitectura se soporta en diferentes patrones, los cuales son:
 <ul>
   <li><strong>Pattern: Service registry</strong>
@@ -27,7 +27,10 @@ La mediación entre el dominio de negocio y la persistencia se la delegamos a un
 </ul>
 <h4>Servicios Expuestos</h4>
 <ul>
-  <li><strong>BankABC-Agreement</strong> Servicio encargado del crud de los convenios.</li>
+  <li><strong>BankABC-Agreement</strong> 
+   <a href="https://github.com/alejoab12/Taller1.4-ModeloyValidacion/tree/master/Bank-Orchestration"> Servicio encargado del crud de los convenios.</a>
+    url:
+  </li>
   <li><strong>BankABC-Transform</strong> Servicio encargado de la transformación de los mensajes.</li>
   <li><strong>Bank-Orchestration</strong> Servicio encargado de orquestar la peticiones a los otros servicios y de realizar el enrutamiento a los servicios de proveedores.</li>
   </ul>
