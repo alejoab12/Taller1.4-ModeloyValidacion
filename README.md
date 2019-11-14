@@ -1,7 +1,7 @@
 <h3>Taller de modelo y validación</h3>
 <h4>Arquitectura de MicroServicios</h4>
 
-Se realizo una aproximacion de arquitectura de micro servicios, pensando en el desacoplamiento y responsabilidad única, buscando una solución acorde a la necesidad del Banco ABC. 
+Se realizo una aproximacion de un estilo de  arquitectura de micro-servicios y un estilo de arquitectura SOA, ambos estilos nos proporcionan patrones que pensamos que aportan beneficios a la solución,  reduciendo acoplamiento, centrandonos en la responsabilidad única por dominio de negocio.
 Se realizo una composicion por orquestación de servicios.
 <h6>La arquitectura se soporta en diferentes patrones, los cuales son:</h6>
 <ul>
