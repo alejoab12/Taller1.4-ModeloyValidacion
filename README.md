@@ -1,7 +1,7 @@
 <h3>Taller de modelo y validación</h3>
-<h4>Arquitectura de MicroServicios</h4>
+<h4>Arquitectura Propuesta</h4>
 
-Se realizo una aproximacion de un estilo de  arquitectura de micro-servicios y un estilo de arquitectura SOA, ambos estilos nos proporcionan patrones que pensamos que aportan beneficios a la solución,  reduciendo acoplamiento, centrandonos en la responsabilidad única por dominio de negocio.
+Se realizo una aproximacion de un estilo de  arquitectura de micro-servicios y un estilo de arquitectura SOA, ambos estilos nos proporcionan patrones que pensamos que aportan beneficios a la solución,  reduciendo acoplamiento, centrandonos en la responsabilidad única por dominio de negocio y generando retorno de valor a la organización.
 Se realizo una composicion por orquestación de servicios.
 <h6>La arquitectura se soporta en diferentes patrones, los cuales son:</h6>
 <ul>
@@ -24,6 +24,16 @@ Se realiza el enrutamiento de acuerdo a las referencias enviadas por los cliente
 La creación de objetos entre capas lógicas se realiza mediante inyección de dependencias.</li>
 <li><strong>Pattern: Repository</strong>
 La mediación entre el dominio de negocio y la persistencia se la delegamos a un repositorio. </li>
+<li><strong>Pattern:Inventory Endpoint:</strong>
+ Se realizo un inventario de servicios en swagger hub, permitiendo descrubir con facilidad los servicios y sus urls.
+</li> 
+<li><strong>Pattern:Decoupled Contract</strong>
+  Se construyeron los contratos con la especificacion OPEN API 3.0 y se exponen en swagger hub.
+</li>
+</li> 
+<li><strong>Pattern:Service Layers</strong>
+  Se separan los servicios por capas de utilidad, tarea, procesos.
+</li>
 </ul>
 <h4>Servicios Expuestos</h4>
 <ul>
