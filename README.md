@@ -3,7 +3,7 @@
 
 Se implementó una arquitectura de micro servicios, pensando en el desacoplamiento y responsabilidad única, buscando una solución acorde a la necesidad del Banco ABC. 
 Se realizo una composicion por orquestación de servicios.
-La arquitectura se soporta en diferentes patrones, los cuales son:
+<h6>La arquitectura se soporta en diferentes patrones, los cuales son:</h6>
 <ul>
   <li><strong>Pattern: Service registry</strong>
 Se realiza el descubrimiento de los servicios mediante API swaggers con especificación open api 3.0. Permitiendo al cliente acceder a las diferentes operaciones expuestas, contratos, y esquemas.</li>
