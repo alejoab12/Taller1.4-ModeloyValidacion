@@ -1,7 +1,7 @@
 <h3>Taller de modelo y validación</h3>
 <h4>Arquitectura de MicroServicios</h4>
 
-Se implementó una arquitectura de micro servicios, pensando en el desacoplamiento y responsabilidad única, buscando una solución acorde a la necesidad del Banco ABC. 
+Se realizo una aproximacion de arquitectura de micro servicios, pensando en el desacoplamiento y responsabilidad única, buscando una solución acorde a la necesidad del Banco ABC. 
 Se realizo una composicion por orquestación de servicios.
 <h6>La arquitectura se soporta en diferentes patrones, los cuales son:</h6>
 <ul>
