@@ -1,0 +1,99 @@
+openapi: 3.0.0
+servers:
+- url: http://40.117.38.177:9587
+  description: Servidor donde se realiza la consulta de informacion de los convenios
+info:
+  description: Consulta datos convenio
+  version: "1.0.0"
+  title: Consulta datos convenio
+  contact:
+    email: ma-alcala@javeriana.edu.co
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: Datos Convenio
+    description: Consulta de datos convenio
+paths:
+  /agreement:
+    get:
+      tags:
+        - Datos Convenio
+      summary: Operación donde se realiza la consulta de datos de los convenios
+      operationId: agreement
+      parameters:
+        - in: query
+          name: reference
+          description: Referencia del convenio
+          required: true
+          schema:
+            type: string
+        - in: query
+          name: operationName
+          description: nombre de la operacion del convenio
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Referencia encontrada exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AgreementServiceModel'
+        '400':
+          description: referencia no encontrada
+ 
+components:
+  schemas:
+    AgreementServiceModel:
+      type: object
+      required:
+        - id
+        - operation
+        - type
+        - template
+        - resultTemplate
+        - httpMethod
+        - httpHeader
+        - agreement
+      properties:
+        id:
+          type: integer
+          example: 4
+        operation:
+          type: string
+          example: '/servicios/pagos/v1/payments/[--reference--]'
+        type:
+          type: string
+          example: rest
+        template:
+          type: string
+        resultTemplate:
+          type: string
+          example: '{ \"totalPay\" : .valorFactura }'
+        httpMethod:
+          type: string
+          example: 'get'
+        httpHeader:
+          type: string
+          example: '{"Content-type":"application/json"}'
+        agreement:
+          $ref: '#/components/schemas/Agreement'
+      
+    Agreement:
+      required:
+        - id
+        - agreement
+        - url
+      properties:
+        id:
+          type: integer
+          example: 1
+        agreement:
+          type: string
+          example: '1235'
+        url:
+          type: string
+          example: 'http://ec2-18-228-36-0.sa-east-1.compute.amazonaws.com:9090'
+      type: object

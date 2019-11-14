@@ -1,0 +1,57 @@
+openapi: 3.0.0
+servers:
+- url: http://40.117.38.177:9573/
+  description: Servidor de servicio de transformacion
+info:
+  description: API para transformar mensajes en formato xml y json
+  version: "1.0.0"
+  title: Transformacion XSLT y JSLT
+  contact:
+    email: ma-alcala@javeriana.edu.co
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
+tags:
+  - name: Transformacion
+    description: Servicio de transformacion xslt y jslt
+paths:
+  /transform:
+    post:
+      tags:
+        - Transformacion
+      summary: Servicio encargado de la transformacion de los mensajes de proveedores
+      operationId: transform
+      description: Adds an item to the system
+      responses:
+        '200':
+          description: item created
+          content:
+            application/json:
+              schema:
+                type: string
+        '500':
+          description: 'Error en la transformacion'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransformReqModel'
+        description: Inventory item to add
+components:
+  schemas:
+    TransformReqModel:
+      type: object
+      required:
+        - message
+        - template
+        - type
+      properties:
+        message:
+          type: string
+          example: '{ "idFactura": 12312, "valorFactura": 3014.427082208293 }'
+        template:
+          type: string
+          example: '{ "totalPay" : .valorFactura }'
+        type:
+          type: string
+          example: rest

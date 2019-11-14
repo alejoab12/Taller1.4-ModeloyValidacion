@@ -1,0 +1,45 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema#",
+    "CheckPayRespModel": {
+      "required": [
+        "totalPay"
+      ],
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "example": 454554.555
+        }
+      }
+    },
+    "PayAgreementReqModel": {
+      "required": [
+        "reference",
+        "totalPay"
+      ],
+      "type": "object",
+      "properties": {
+        "reference": {
+          "type": "string",
+          "example": "1235698"
+        },
+        "totalPay": {
+          "type": "number",
+          "example": 234.343
+        }
+      }
+    },
+    "PayAgreementRespModel": {
+      "required": [
+        "message"
+      ],
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "example": "Factura Pagada Exitosamente"
+        }
+      }
+    }
+  }
+}

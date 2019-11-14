@@ -1,0 +1,26 @@
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "TransformReqModel": {
+    "type": "object",
+    "required": [
+      "message",
+      "template",
+      "type"
+    ],
+    "properties": {
+      "message": {
+        "type": "string",
+        "example": "{ \"idFactura\": 12312, \"valorFactura\": 3014.427082208293 }"
+      },
+      "template": {
+        "type": "string",
+        "example": "{ \"totalPay\" : .valorFactura }"
+      },
+      "type": {
+        "type": "string",
+        "example": "rest"
+      }
+    }
+  }
+}

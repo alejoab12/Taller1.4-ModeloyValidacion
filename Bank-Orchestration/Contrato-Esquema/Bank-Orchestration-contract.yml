@@ -1,0 +1,93 @@
+openapi: 3.0.0
+info:
+  title: Servicio banco abc
+  description: Servicios de pago y consulta de convenios banco abc
+  contact:
+    email: ma-alcala@javeriana.edu.co
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+- url: http://40.117.38.177:9578/bankabc/services
+  description: Servicios de consulta y pago
+tags:
+- name: convenio
+  description: Servicio donde se pueden realizar consultas y pagos de los convenios
+paths:
+  /consultpayment:
+    get:
+      tags:
+      - convenio
+      summary: Consulta de saldo a pagar
+      operationId: consultpayment
+      parameters:
+      - name: reference
+        in: query
+        description: Referencia del convenio a consultar
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: string
+      responses:
+        200:
+          description: Referencia encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CheckPayRespModel'
+        400:
+          description: Referencia no encontrada
+  /payagreement:
+    post:
+      tags:
+      - convenio
+      summary: pagar convenio
+      description: Pago de la referencia del convenio
+      operationId: payagreement
+      requestBody:
+        description: Mensaje para realizar pago de la referencia
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PayAgreementReqModel'
+      responses:
+        200:
+          description: Factura pagada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PayAgreementRespModel'
+        400:
+          description: Factura no encontrada
+components:
+  schemas:
+    CheckPayRespModel:
+      required:
+      - totalPay
+      type: object
+      properties:
+        id:
+          type: number
+          example: 454554.555
+    PayAgreementReqModel:
+      required:
+      - reference
+      - totalPay
+      type: object
+      properties:
+        reference:
+          type: string
+          example: "1235698"
+        totalPay:
+          type: number
+          example: 234.343
+    PayAgreementRespModel:
+      required:
+      - message
+      type: object
+      properties:
+        message:
+          type: string
+          example: Factura Pagada Exitosamente
